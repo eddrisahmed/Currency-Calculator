@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+
+
+ 
+  <div class="container">
+    <div class="calculator">
+        <h1>Currency Calculator</h1>
+        <div class="converter">
+            <input type="number" id="amount" placeholder="Enter amount" />
+            
+            <!-- Searchable dropdown for 'From Currency' -->
+            <div class="dropdown">
+                <input type="text" id="from_currency_search" placeholder="Search currency..." oninput="filterDropdown('from_currency_search', 'from_currency_list')"/>
+                <div class="dropdown-list" id="from_currency_list">
+                    <!-- Currency options will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Searchable dropdown for 'To Currency' -->
+            <div class="dropdown">
+                <input type="text" id="to_currency_search" placeholder="Search currency..." oninput="filterDropdown('to_currency_search', 'to_currency_list')"/>
+                <div class="dropdown-list" id="to_currency_list">
+                    <!-- Currency options will be dynamically added here -->
+                </div>
+            </div>
+
+            <button id="convert_btn">Convert</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <!-- Real-time market update section -->
+    <div class="market-section">
+        <h2>Real-Time Currency Market</h2>
+        <div class="market-info">
+            <p>Current Rate: <span id="current_rate"></span></p>
+            <p>Market Value Change: <span id="market_change"></span></p>
+        </div>
+        <div class="chart-container">
+            <canvas id="rateChart"></canvas>
+        </div>
+    </div>
+
+
+    
+</div>
+<script src="script.js"></script>
+</body>
+</html>
