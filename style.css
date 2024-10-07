@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 50;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.calculator, .market-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #4267B2;
+}
+
+.converter, .market-info {
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+  max-width: 220px;
+}
+
+button {
+  background-color: #4267B2;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: #365899;
+}
+
+#result, #current_rate, #market_change {
+  font-size: 20px;
+}
+
+.chart-container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+
+  .calculator, .market-section {
+      width: 45%;
+  }
+
+  .market-section {
+      margin-left: 20px;
+  }
+}
+/* Style for dropdown */
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown input {
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-list {
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  display: none; /* Initially hidden */
+}
+
+.dropdown-list div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list div:hover {
+  background-color: #f0f0f0;
+}
+
+ 
